@@ -1,0 +1,15 @@
+//Author: Julian St John
+//Date: 10/28/21
+//HW4
+
+sortAnalysis: main.o sorter.o
+    g++ -g -std=c++11 main.o sorter.o -o sortAnalysis
+
+main.o: main.cpp sorter.o 
+    g++ -o -std=c++11 main.cpp
+
+sorter.o: sorter.h sorter.cpp
+    g++ -o -std=c++11 sorter.cpp
+
+clean
+    del *.o main.exe sortAnalysis.exe
